@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Личный кабинет временно недоступен</title>
+  <style>
+    :root {
+      --bg: #f3faf7;
+      --ink: #1b1b1c;
+      --muted: #3d5650;
+      --accent: #179980;
+      --card: #ffffff;
+      --soft: #e7f7f2;
+      --line: #d7eee6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      color: var(--ink);
+      font-family:
+        "Avenir Next", "Segoe UI", system-ui, sans-serif;
+      background:
+        radial-gradient(
+          42rem 28rem at 12% -10%,
+          #c8f6ea 0%,
+          transparent 70%
+        ),
+        radial-gradient(
+          36rem 24rem at 110% 110%,
+          #d9f8f0 0%,
+          transparent 68%
+        ),
+        var(--bg);
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+    }
+
+    .notice {
+      width: min(36rem, 100%);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 1.75rem;
+      box-shadow:
+        0 1px 2px rgb(23 80 70 / 5%),
+        0 18px 50px rgb(23 120 100 / 10%);
+      padding: 0 2rem 1.6rem;
+      overflow: hidden;
+    }
+
+    .art {
+      margin: 0 -2rem 1.4rem;
+      height: 9.5rem;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(
+          8rem 5rem at 70% 30%,
+          #b6f3e4 0%,
+          transparent 70%
+        ),
+        linear-gradient(180deg, #d9f6ee, #f4fbf8);
+    }
+
+    .art svg {
+      width: 11.5rem;
+      height: auto;
+    }
+
+    h1 {
+      margin: 0 0 1rem;
+      font-family:
+        "Iowan Old Style", Palatino, Georgia, serif;
+      font-size: clamp(1.7rem, 3vw, 2.05rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    .text {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.65;
+    }
+
+    .text + .text {
+      margin-top: 0.85rem;
+    }
+
+    .sorry {
+      margin-top: 1.35rem;
+      padding: 0.95rem 1.05rem;
+      border-radius: 1rem;
+      background: var(--soft);
+      color: var(--ink);
+    }
+
+    .brand {
+      margin: 1.45rem 0 0;
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 40rem) {
+      .notice {
+        padding: 0 1.2rem 1.3rem;
+        border-radius: 1.35rem;
+      }
+
+      .art {
+        margin: 0 -1.2rem 1.2rem;
+      }
+
+      .text {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="notice" role="status">
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 200 110" fill="none">
+          <ellipse
+            cx="100" cy="98" rx="54" ry="6"
+            fill="#c5e8de"
+          />
+          <path
+            d="M24 30c24 8 42 8 66 0v56c-24 8-42 8-66 0V30Z"
+            fill="#fff"
+            stroke="#b5ddd0"
+            stroke-width="1.6"
+          />
+          <path
+            d="M110 30c24 8 42 8 66 0v56c-24 8-42 8-66 0V30Z"
+            fill="#f7fffc"
+            stroke="#b5ddd0"
+            stroke-width="1.6"
+          />
+          <path
+            d="M38 46h38M38 58h32M38 70h26"
+            stroke="#c8ebe2"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M124 46h38M124 58h32M124 70h24"
+            stroke="#c8ebe2"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M98 32v54"
+            stroke="#179980"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M148 30v18l-6-4-6 4V30h12Z"
+            fill="#1bc1a5"
+          />
+        </svg>
+      </div>
+      <h1>Уважаемые пользователи!</h1>
+      <p class="text">
+        В связи с атаками на дата-центры Яндекс доступ
+        к Личному кабинету временно приостановлен.
+      </p>
+      <p class="text">
+        Проблема находится на стороне Яндекс, точные сроки
+        восстановления пока назвать не можем.
+      </p>
+      <p class="text sorry">
+        Приносим извинения за временные неудобства.
+      </p>
+    </article>
+  </main>
+</body>
+</html>
